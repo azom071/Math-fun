@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Addition Game</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="PLUS.css">
+</head>
+<body>
+
+    <div id="goBack"><a href="index.html">Goback</a></div>
+
+    <div id="box">
+        <h2>যোগের মজার খেলা</h2>
+
+        <div class="calc">
+            <!-- Top row: X + Y -->
+            <div class="row top">
+                <button id="x">X</button>
+                <span>+</span>
+                <button id="y">Y</button>
+            </div>
+
+            <!-- Middle row: = -->
+            <div class="row mid">
+                <span>=</span>
+            </div>
+
+            <!-- Bottom row: input box -->
+            <div class="row bottom">
+                <input id="z" type="number" placeholder="Enter sum">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="genr">Generate Numbers</button>
+            <button id="check">Check Answer</button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="PLUSJ.js"></script>
+</body>
+</html>

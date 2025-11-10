@@ -1,0 +1,83 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #fceabb, #f8b500); /* warm educational gradient */
+}
+
+/* Main Container */
+#Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 40px 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+#Home:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading (optional) */
+#Home h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Links as Buttons */
+#Home a {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 12px;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* nice blue gradient */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+#Home a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Different colors for different functions (optional) */
+#Home a:nth-child(1) { background: linear-gradient(to right, #43e97b, #38f9d7); } /* green for addition */
+#Home a:nth-child(2) { background: linear-gradient(to right, #f77062, #fe5196); } /* red/pink for subtraction */
+#Home a:nth-child(3) { background: linear-gradient(to right, #fcd440, #f78f1e); } /* yellow/orange for multiplication */
+#Home a:nth-child(4) { background: linear-gradient(to right, #8e2de2, #4a00e0); } /* purple for division */
+#Home a:nth-child(5) { background: linear-gradient(to right, #ff6a00, #ee0979); } /* mix function rainbow-like */
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    #Home {
+        padding: 30px 20px;
+    }
+
+    #Home a {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+}

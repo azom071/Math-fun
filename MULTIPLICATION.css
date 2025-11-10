@@ -1,0 +1,216 @@
+/* 🌟 Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #d1c4e9, #b39ddb);
+}
+
+/* 🧩 Main Box */
+#box {
+    background-color: #fff;
+    padding: 40px 45px;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* 🏷 Heading */
+h2 {
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #4a148c;
+    font-size: 26px;
+}
+
+/* ➕ Calculation Layout */
+.calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+/* Top row: X × Y */
+.calc .row.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Number buttons */
+.calc button {
+    padding: 10px 14px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7e57c2;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.calc button:hover {
+    background-color: #512da8;
+    transform: scale(1.05);
+}
+
+/* Operator symbol */
+.calc span {
+    font-size: 22px;
+    font-weight: 600;
+    color: #4a148c;
+}
+
+/* Middle (= sign) */
+.calc .row.mid span {
+    font-size: 24px;
+}
+
+/* Bottom input box */
+.calc .row.bottom input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 12px;
+    width: 130px;
+    font-size: 17px;
+    border: 1.8px solid #bbb;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.08s;
+}
+
+.calc input[type="number"]::-webkit-outer-spin-button,
+.calc input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calc input[type="number"]::placeholder {
+    color: #9e9e9e;
+}
+
+.calc input[type="number"]:focus {
+    border-color: #7e57c2;
+    box-shadow: 0 0 6px rgba(126, 87, 194, 0.25);
+    outline: none;
+}
+
+/* 🎮 Buttons Row (Generate & Check) */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.buttons button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.15s;
+}
+
+/* Generate */
+#genr {
+    background-color: #9575cd;
+    color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#genr:hover {
+    background-color: #7e57c2;
+    transform: scale(1.03);
+}
+
+/* Check */
+#check {
+    background-color: #ab47bc;
+    color: #fff;
+}
+#check:hover {
+    background-color: #8e24aa;
+    transform: scale(1.03);
+}
+
+/* 💬 Message */
+#message {
+    font-size: 18px;
+    font-weight: 500;
+    min-height: 24px;
+    color: #4a148c;
+}
+
+/* 🔙 Go Back */
+#goBack {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#goBack a {
+    text-decoration: none;
+    color: #4a148c;
+    font-weight: 600;
+    background-color: #ede7f6;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+#goBack a:hover {
+    background-color: #d1c4e9;
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive */
+@media (max-width: 450px) {
+    #box {
+        padding: 28px 20px;
+    }
+
+    .calc {
+        gap: 10px;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    button,
+    input[type="number"] {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
